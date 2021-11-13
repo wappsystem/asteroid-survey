@@ -1,0 +1,56 @@
+<div id=D__ID>
+    <form id="F__ID">
+        <div class="row mr-0 ml-0 p-3" style="background-color:#efefef;">
+            <div class="col-lg-4 col-sm-0 text-center">
+            </div>
+            <div class="col-lg-4 col-sm-12 text-center">
+                <span style="color:rgb(24, 24, 24)">
+                    <h3><b>Thank you for completing these questions. </b></h3>
+
+            </div>
+            <div class="col-lg-4 col-sm-0 text-center">
+            </div>
+        </div>
+        <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm text-center bg-white"><br>
+                        <h4>Unfortunately, you are INELIGIBLE to complete the digital health preferences survey at this
+                            time.<br><br>
+                            If you are worried about your sleep, please contact your GP or other health professional and
+                            for more information about sleep, visit the
+                            <a href="https://www.sleephealthfoundation.org.au" target=_blank>Sleep Health Foundation
+                                Website</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            //-------------------------------------
+            m.default_load = m.load;
+            m.load = function () {
+                $('#header').css('opacity', '0.8');
+                m.default_load();
+                $('#D__ID').scrollTop(0);
+                $(window).scrollTop(0);
+            }
+
+        }
+    </script>
+    <style>
+        #D__ID {
+            font-family: 'Roboto Slab';
+            animation: vm_module_fadein 1.0s;
+            color: #000;
+            background-color: rgb(255, 255, 255, 0.8);
+            min-height: 800px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>
