@@ -1318,7 +1318,7 @@
                 $('#submit1__ID').show();
                 $('#q4-1__ID').hide();
                 $('#shift__ID').removeAttr('required');
-                show_section(4);
+                show_section(1);
                 //-- PSQI ---------------------------             
                 if($("input[name='PSQI5j']").val()!=''){
                     $('#PSQI5ji__ID').prop('required', true);
@@ -1565,6 +1565,23 @@
                 scores.PSQISLPQUAL=v16;
                 scores.PSQIMEDS=v17;
                 scores.PSQI=( parseInt(scores.PSQIDURAT)+ parseInt(scores.PSQIDISTB)+ parseInt(scores.PSQILATEN)+ parseInt(scores.PSQIDAYDYS)+  parseInt(scores.PSQIHSE)+  parseInt(scores.PSQISLPQUAL)+ parseInt(scores.PSQIMEDS)).toString();
+                //PSQI-------------------
+            }
+            //---------------------------------------
+            m.before_submit = function (data, index) {
+                //ISI-------------------
+                data.ISI=scores.ISI;
+                data.ISI_1=scores.ISI_1;
+                //ISI-------------------
+                //PSQI-------------------
+                data.PSQIDURAT=scores.PSQIDURAT;
+                data.PSQIDISTB=scores.PSQIDISTB;
+                data.PSQILATEN=scores.PSQILATEN;
+                data.PSQIDAYDYS=scores.PSQIDAYDYS;
+                data.PSQIHSE=scores.PSQIHSE;
+                data.PSQISLPQUAL=scores.PSQISLPQUAL;
+                data.PSQIMEDS=scores.PSQIMEDS;
+                data.PSQI=( parseInt(data.PSQIDURAT)+ parseInt(data.PSQIDISTB)+ parseInt(data.PSQILATEN)+ parseInt(data.PSQIDAYDYS)+  parseInt(data.PSQIHSE)+  parseInt(data.PSQISLPQUAL)+ parseInt(data.PSQIMEDS)).toString();
                 //PSQI-------------------
             }
             //---------------------------------------
