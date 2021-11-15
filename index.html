@@ -6,7 +6,33 @@
         <meta name="description" content="">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel="icon" href="data:,">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+        <meta name="theme-color" content="#404a7c">
+    
+        <!-- GOOGLE WEB FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700" rel="stylesheet">
+    
+        <!-- BASE CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styleeligibility.css" rel="stylesheet">
+        <link href="css/vendors.css" rel="stylesheet">
+        
+        <!-- MODERNIZR MENU -->
+        <script src="js/modernizr.js"></script>            
     </head>
     <body>
         <!-- Typical website layout, the contents are dynamiclly updated by modules-->
@@ -15,46 +41,10 @@
         <div id=footer></div>
         <div id=app style='display:none'></div>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
-
-
-        <!-- Facebook Pixel Code -->
-
-        <script>
-
-            !function(f,b,e,v,n,t,s)
-            
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            
-            'https://connect.facebook.net/en_US/fbevents.js');
-            
-            fbq('init', '274665204363375');
-            
-            fbq('track', 'PageView');
-            
-            </script>
-            
-            <noscript><img height="1" width="1" style="display:none"
-            
-            src=https://www.facebook.com/tr?id=274665204363375&ev=PageView&noscript=1
-            
-        /></noscript>
-            
-        <!-- End Facebook Pixel Code -->
-
     </body>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.01,0.01]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.02,0.02]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         $vm.debug=1;
         //------------------------------------
         //setup modules location
@@ -70,7 +60,7 @@
         //modules used immediately
         $vm.module_list={
             //you can add modules here directly
-            "home":	        {url:"$H/0/home.html",router:1},
+            "home":	        {url:"$H/m/elig-questions-form.html",router:1},
             "app":	        {url:"$H/0/app.html"},
             "header":	    {url:"$H/0/header.html"},
             "footer":	    {url:"$H/0/footer.html"},

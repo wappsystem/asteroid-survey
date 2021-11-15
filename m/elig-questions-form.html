@@ -1,1312 +1,869 @@
 <div id=D__ID>
-    <div>
-        <form id=F__ID>
-            <div id=S1__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center">
-                        <span style="color:#888">1 of 3 </span> <b>SCREENING QUESTIONS</b>
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
+					<div>
+						<h2>Welcome to the digital health survey to explore digital health preferences and needs for older adults with poor sleep.</h2>
+						<h3>Your responses to this survey will help us decide the most important requirements for the optimisation of our new sleep therapy app for this population.</h3>
+						<p>You are eligible to complete the survey if you are:</p>
+						    <p>1. Over 60 years<br>
+						       2. Have insomnia symptoms or meet criteria for a poor sleeper</p>
+						    <p>All answers are anonymous and absolutely no identifiable data will be collected.</p>
+						    <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference #XXX-XXX</small><br><br>
+						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
+					</div>
+					<div class="copy"><img src="img/footer_logos.png" Width="65%" Height="65%">
+					</div>
+				</div>
+
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+                        <div id="progressbar"></div>
                     </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
+                    <!-- /top-wizard -->
+                    <form id=F__ID>
+                        <input id="website" name="website" type="text" value="">
+                        <div id="middle-wizard">
+                            <div id=S1__ID>
+                                <h3 class="main_question"><strong>1/9</strong>Determine your eligiblity here</h3>
+                                <div class="form-group">
+                                <p>What is your age?</p>
+                                    <input type="number" name="age" class="form-control" placeholder="Age" class="required">
+                                </div>
+                                <div class="form-group">
+                                <p>Are you fluent in English?</p>
+                                    <label class="container_radio">Yes
+                                                <input type="radio" name="englishfluency" value="Yes" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">No
+                                                <input type="radio" name="englishfluency" value="No">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Do you have a smartphone?</p>
+                                    <label class="container_radio">Yes
+                                        <input type="radio" name="smartphone" value="Yes" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">No
+                                        <input type="radio" name="smartphone" value="No" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <!-- /row -->
+                            </div>
+                            <div id=S2__ID>
+                                <h3 class="main_question"><strong>2/9</strong></h3>
+                                <div class="form-group">
+                                <p>Are you a shift-worker (in a regular work week)? <br>Choose from</p>
+                                    <label class="container_radio">No
+                                                <input type="radio" name="shift-worker" value="No" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">Yes, I am on rotating shifts
+                                                <input type="radio" name="shift-worker" value="Yes, I am on rotating shifts" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">Yes, I am on shifts between hours of 8am – 8pm
+                                                <input type="radio" name="shift-worker" value="Yes, I am on shifts between hours of 8am – 8pm" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">Yes, I am on shifts outside hours of 8am – 8pm
+                                                <input type="radio" name="shift-worker" value="Yes, I am on shifts outside hours of 8am – 8pm" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </div>
+                                <div class="form-group">
+                                <p>Have you travelled to a destination with 2 hours time difference last 30 days? </p>
+                                            <label class="container_radio">Yes
+                                                <input type="radio" name="travel2hours" value="No" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">No
+                                                <input type="radio" name="travel2hours" value="No" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </div>									
+                            </div>
+                            <div id=S3__ID>
+                                <h3 class="main_question"><strong>3/9</strong></h3>
+                                <p>Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?</p>
+                                <p>Select all that apply</p>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Major Depressive Disorder 
+                                        <input type="checkbox" name="disorders" value="Major Depressive Disorder" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Heart failure 
+                                        <input type="checkbox" name="disorders" value="Heart failure">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Epilepsy 
+                                        <input type="checkbox" name="disorders" value="Epilepsy">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Bipolar disorder
+                                        <input type="checkbox" name="disorders" value="Bi-polar disorder">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Dementia 
+                                        <input type="checkbox" name="disorders" value="Dementia">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_check version_2">Mild Cognitive Impairment 
+                                        <input type="checkbox" name="disorders" value="Mild Cognitive Impairment">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                                                    <div class="form-group">
+                                    <label class="container_check version_2">All of the above
+                                        <input type="checkbox" onclick='Selectall()' name="disorders" value="All of the above"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div> 
+                                <div class="form-group">
+                                    <label class="container_check version_2">None of the above
+                                        <input type="checkbox" onclick='deSelectall()' name="None" value="None of the above" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>	
+                                <input style=display:none type=text name=illness_disorder id=disorders >								
+                            </div>
+                            <div id=S4__ID>
+                                <h3 class="main_question"><strong>4/9</strong></h3>
+                                <p>The following questions relate to your usual sleep habits during the past month <u>only</u>.  
+                                    Your answers should indicate the most accurate reply for the <u>majority</u> of days and nights in the past month.
+                                </p>
+                                <p>Please answer all questions.</p>
+                                <div class="form-group">
+                                    <p>During the past month, what time have you usually gone to bed at night?</p>
+                                    <p>BED TIME</p>
+                                    <input type="time" name="PSQI1" class="form-control" class="required">
+                                </div>
+                                <div class="form-group">
+                                    <p>During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</p>
+                                    <input type="number" name="PSQI2" class="form-control" placeholder="NUMBER OF MINUTES" class="required">
+                                </div>    
+                            </div>
+                            <div id=S5__ID>
+                                <h3 class="main_question"><strong>5/9</strong></h3>
+                                <div class="form-group">
+                                    <p>During the past month, what time have you usually gotten up in the morning?</p>
+                                    <p>GETTING UP TIME</p>
+                                    <input type="time" name="PSQI3" class="form-control"  class="required">
+                                </div>
+                                <div class="form-group">
+                                    <p>During the past month, how many hours of <u>actual sleep</u> did you get at night?</p>
+                                    <input type="number" name="PSQI4" class="form-control" placeholder="HOURS OF SLEEP PER NIGHT" class="required">
+                                </div>
+                            </div>
+                            <div id=S6__ID>
+                                <h3 class="main_question"><strong>6/9</strong></h3>
+                                <p>For each of the remaining questions, tick the one best response.</p>
+                                <p>During the past month, how often have you had trouble sleeping because you . . .</p>
+                                <div class="form-group">
+                                    <p>Cannot get to sleep within 30 minutes</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5a" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5a" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5a" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5a" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Wake up in the middle of the night or early morning</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5b" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5b" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5b" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5b" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S7__ID>
+                                <h3 class="main_question"><strong>7/9</strong></h3>
+                                <p>During the past month, how often have you had trouble sleeping because you . . .</p>
+                                <div class="form-group">
+                                    <p>Have to get up to use the bathroom</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5c" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5c" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5c" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5c" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Cannot breathe comfortably</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5d" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5d" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5d" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5d" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S8__ID>
+                                <h3 class="main_question"><strong>8/9</strong></h3>
+                                <p>During the past month, how often have you had trouble sleeping because you . . .</p>
+                                <div class="form-group">
+                                    <p>Cough or snore loudly</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5e" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5e" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5e" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5e" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Feel too cold</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5f" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5f" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5f" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5f" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S9__ID>
+                                <h3 class="main_question"><strong>9/9</strong></h3>
+                                <p>During the past month, how often have you had trouble sleeping because you . . .</p>
+                                <div class="form-group">
+                                    <p>Feel too hot</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5g" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5g" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5g" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5g" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Had bad dreams</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5h" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5h" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5h" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5h" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S10__ID>
+                                <h3 class="main_question"><strong>10/9</strong></h3>
+                                <p>During the past month, how often have you had trouble sleeping because you . . .</p>
+                                <div class="form-group">
+                                    <p>Have pain</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5i" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5i" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5i" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5i" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Any other reason(s) please describe:</p>
+                                    <input type="text" name="PSQI5j" class="form-control"  placeholder='reason(s)' >
+                                </div>
+                                <div id=how_often_5__ID class="form-group">
+                                    <p>How often during the past month have you had trouble sleeping because of this?</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI5ji" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI5ji" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI5ji" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI5ji" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S11__ID>
+                                <h3 class="main_question"><strong>11/9</strong></h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <p>During the past month, how would you rate your sleep quality overall?</p>
+                                        <label class="container_radio">Very good
+                                            <input type="radio" name="PSQI6" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Fairly good
+                                            <input type="radio" name="PSQI6" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Fairly bad
+                                            <input type="radio" name="PSQI6" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Very bad
+                                            <input type="radio" name="PSQI6" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>During the past month, how often have you taken medicine (prescribed or 'over the counter') to help you sleep?</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI7" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI7" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI7" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI7" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=S12__ID>
+                                <h3 class="main_question"><strong>12/9</strong></h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <p>During the past month, how often have you had trouble staying awake while driving, eating meals or engaging in social activity?</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI8" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI8" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI8" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI8" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>During the past month, how would you rate your sleep quality overall?</p>
+                                        <label class="container_radio">No problem at all
+                                            <input type="radio" name="PSQI9" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Only a very slight problem
+                                            <input type="radio" name="PSQI9" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Somewhat of a problem
+                                            <input type="radio" name="PSQI9" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">A very big problem
+                                            <input type="radio" name="PSQI9" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=S13__ID>
+                                <h3 class="main_question"><strong>13/9</strong></h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <p> Do you have a bed partner or room mate?</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI10" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI10" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI10" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI10" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=S14__ID>
+                                <h3 class="main_question"><strong>14/9</strong></h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
+                                        <p>Loud snoring</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI10a" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI10a" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI10a" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI10a" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Long pauses between breaths while asleep</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI10b" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI10b" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI10b" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI10b" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=S15__ID>
+                                <h3 class="main_question"><strong>15/9</strong></h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
+                                        <p>Legs twitching or jerking while you sleep</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI10c" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI10c" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI10c" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI10c" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Episodes of disorientation or confusion during sleep</p>
+                                        <label class="container_radio">Not during the past month
+                                            <input type="radio" name="PSQI10d" value="0" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Less than once a week
+                                            <input type="radio" name="PSQI10d" value="1" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Once or twice a week
+                                            <input type="radio" name="PSQI10d" value="2" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Three or more times a week
+                                            <input type="radio" name="PSQI10d" value="3" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=S16__ID>
+                                <h3 class="main_question"><strong>16/9</strong></h3>
+                                <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
+                                <div class="form-group">
+                                    <p>Other restlessness while you sleep; please describe below</p>
+                                    <input type="text" name="PSQI10e" class="form-control"  placeholder='reason(s)' >
+                                </div>
+                                <div id=how_often_10__ID class="form-group">
+                                    <p>How often during the past month have you had trouble sleeping because of this?</p>
+                                    <label class="container_radio">Not during the past month
+                                        <input type="radio" name="PSQI10ei" value="0" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Less than once a week
+                                        <input type="radio" name="PSQI10ei" value="1" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Once or twice a week
+                                        <input type="radio" name="PSQI10ei" value="2" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Three or more times a week
+                                        <input type="radio" name="PSQI10ei" value="3" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S17__ID>
+                                <h3 class="main_question"><strong>17/9</strong></h3>
+                                <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
+                                <div class="form-group">
+                                    <p>Difficulty falling asleep</p>
+                                    <label class="container_radio">None
+                                        <input type="radio" name="ISI_1a" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">Mild
+                                        <input type="radio" name="ISI_1a" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Moderate
+                                        <input type="radio" name="ISI_1a" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Severe
+                                        <input type="radio" name="ISI_1a" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very severe
+                                        <input type="radio" name="ISI_1a" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Difficulty staying asleep</p>
+                                    <label class="container_radio">None
+                                        <input type="radio" name="ISI_1b" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">Mild
+                                        <input type="radio" name="ISI_1b" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Moderate
+                                        <input type="radio" name="ISI_1b" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Severe
+                                        <input type="radio" name="ISI_1b" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very severe
+                                        <input type="radio" name="ISI_1b" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S18__ID>
+                                <h3 class="main_question"><strong>18/9</strong></h3>
+                                <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
+                                <div class="form-group">
+                                    <p>Problem waking up too early</p>
+                                    <label class="container_radio">None
+                                        <input type="radio" name="ISI_1c" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">Mild
+                                        <input type="radio" name="ISI_1c" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Moderate
+                                        <input type="radio" name="ISI_1c" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Severe
+                                        <input type="radio" name="ISI_1c" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very severe
+                                        <input type="radio" name="ISI_1c" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?</p>
+                                    <label class="container_radio">Very satisfied
+                                        <input type="radio" name="ISI_2" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">Satisfied
+                                        <input type="radio" name="ISI_2" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Neutral
+                                        <input type="radio" name="ISI_2" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Dissatisfied
+                                        <input type="radio" name="ISI_2" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very dissatisfied
+                                        <input type="radio" name="ISI_2" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S19__ID>
+                                <h3 class="main_question"><strong>19/9</strong></h3>
+                                <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
+                                <div class="form-group">
+                                    <p>To what extent do you consider your sleep problem to INTERFERE with your daily
+                                        functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores,
+                                        concentration, memory, mood, etc.) CURRENTLY?</p>
+                                    <label class="container_radio">Not at all interfering
+                                        <input type="radio" name="ISI_3" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">A little
+                                        <input type="radio" name="ISI_3" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Somewhat
+                                        <input type="radio" name="ISI_3" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Much
+                                        <input type="radio" name="ISI_3" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very much interfering
+                                        <input type="radio" name="ISI_3" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>How NOTICEABLE to others do you think your sleep problem is in terms of impairing the
+                                        quality of your life?</p>
+                                    <label class="container_radio">Very satisfied
+                                        <input type="radio" name="ISI_4" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">Satisfied
+                                        <input type="radio" name="ISI_4" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Neutral
+                                        <input type="radio" name="ISI_4" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Dissatisfied
+                                        <input type="radio" name="ISI_4" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very dissatisfied
+                                        <input type="radio" name="ISI_4" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S20__ID>
+                                <h3 class="main_question"><strong>20/9</strong></h3>
+                                <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
+                                <div class="form-group">
+                                    <p>How WORRIED/DISTRESSED are you about your current sleep problem?</p>
+                                    <label class="container_radio">Not at all worried
+                                        <input type="radio" name="ISI_3" value="0" class="required">
+                                        <span class="checkmark">0</span>
+                                    </label>
+                                    <label class="container_radio">A little
+                                        <input type="radio" name="ISI_3" value="1" class="required">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="container_radio">Somewhat
+                                        <input type="radio" name="ISI_3" value="2" class="required">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="container_radio">Much
+                                        <input type="radio" name="ISI_3" value="3" class="required">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="container_radio">Very much worried
+                                        <input type="radio" name="ISI_3" value="4" class="required">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S21__ID>
+                                <h3 class="main_question">Eligibility Summary</h3>
+                                <!-- /Gunnar, a bit of code is required her to only show the success div  below if certain radiobuttons/checkboxes in the eligibility quesionnaire are not checked 
+                                    - use the div <div id="unsuccess"> and then copy the contents of the div -->
+                                    <p>You are ELIGIBLE to complete the online survey exploring digital health preferences and
+                                        needs for older adults with poor sleep.</p>
+                                        <p>Please read the information sheet and tick the box for consent before proceeding.</p>
+                                        <p></p>
+                                    <div class="wrapper_success"> 
+                                        <svg class="checkmark_success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle_success" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check_success" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                        </svg>
+                                    </div>
+                                       <h4><span>You are eligible to participate!</span></h4><small>Please read the information sheet below and tick the box for consent before beginning the survey.</small>
+                                       <div class="form-group terms">
+                                    <label class="container_check">Please read and provide consent to <a href="#" data-toggle="modal" data-target="#terms-txt">Information Sheet (click here)</a>
+                                        <input type="checkbox" name="terms" value="Yes" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- S__ID -->
+                        </div>
+                        <!-- Middle Wizard-->
+                        <div id="bottom-wizard">
+                            <button type=button d=-1  id=previous__ID class="backward">Previous</button>
+                            <button type=submit id=next__ID d=1  class="forward">Next</button>
+                            <button type="submit" id=submit1__ID class="submit">I've consented, begin the survey</button>
+                        </div>
+                    </form>
                 </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>1. What is your age?</h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <input class='form-control' type="number" min=18 max=99 name="age"  required>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>2. Are you fluent in English?
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fluent" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fluent" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>3. Do you have a smartphone?
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="smartphone" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="smartphone" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>4. Are you a shift-worker (in a regular work week)? Choose from</h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shiftworker" value="1" required>
-                                    <span class="checkmark"></span>No
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shiftworker" value="2">
-                                    <span class="checkmark"></span>Yes, I am on rotating shifts 
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shiftworker" value="3">
-                                    <span class="checkmark"></span>Yes, I am on shifts between hours of 8am – 8pm
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shiftworker" value="4">
-                                    <span class="checkmark"></span>Yes, I am on shifts outside hours of 8am – 8pm 
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>5. Have you travelled to a destination with 2 hours time difference last 30 days?
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="travel" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="travel" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>6. Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4 p-1">Major Depressive Disorder<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="depression" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="depression" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                            <fieldset class="pl-4 p-1">Heart failure<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="heart_failure" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="heart_failure" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                            <fieldset class="pl-4 p-1">Epilepsy<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="epilepsy" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="epilepsy" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                            <fieldset class="pl-4 p-1">Bi-polar disorder<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="bipolar" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="bipolar" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                            <fieldset class="pl-4 p-1">Dementia<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="dementia" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="dementia" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                            <fieldset class="pl-4 p-1">Mild Cognitive Impairment<br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="cognitive_impairment" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="cognitive_impairment" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
-                    </div>
-                </div>
+                <!-- /Wizard container -->
             </div>
-            <div id=S2__ID>                
-                <div id=page3__ID class="row  mr-0 ml-0 p-4" >
-                    <div class="col-lg-1 col-sm-0 ">
-                    </div>
-                    <div class="col-lg-10 col-sm-12 text-center">
-                        <span style="color:#888">2 of 3 </span> <b>Pittsburgh Sleep Quality Index</b>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 ">
-                    </div>
-                </div>
-                <div id=quest3__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <fieldset class="subquestions">
-                            <h4>The following questions relate to your usual sleep habits during the past month <u>only</u>.  
-                                Your answers should indicate the most accurate reply for the <u>majority</u> of days and nights in the past month.
-                            </h4>
-                            <h4>Please answer all questions.</h4>
-                            </fieldset>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>1. During the past month, what time have you usually gone to bed at night?</h4>
-                            <fieldset class="">
-                                <label><span class="">BED TIME</span>
-                                    <label><span class="">&nbsp;&nbsp;HH</span>
-                                        <select class="form-control"  id="hh__ID" required>
-                                            <option value=""></option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                        </select>
-                                    </label>
-                                    <label><span class="">&nbsp;&nbsp;MM</span>
-                                        <select class="form-control"  id="mm__ID">
-                                            <option value="00">00</option>
-                                            <option value="05">05</option>
-                                            <option value="10">10</option>
-                                            <option value="15">15</option>
-                                            <option value="20">20</option>
-                                            <option value="25">25</option>
-                                            <option value="30">30</option>
-                                            <option value="35">35</option>
-                                            <option value="40">40</option>
-                                            <option value="45">45</option>
-                                            <option value="50">50</option>
-                                            <option value="55">55</option>
-                                        </select>
-                                    </label>
-                                    <label><span class="">&nbsp;&nbsp;AM/PM</span>
-                                        <select class="form-control"  id="ap__ID">
-                                            <option value="AM">AM</option>
-                                            <option value="PM" selected >PM</option>
-                                        </select>
-                                    </label>
-                                    <input class="form-control" type="text" name="PSQI1" style='display:none'>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>2. During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</h4>
-                            <fieldset class="">
-                                <label><span class="">NUMBER OF MINUTES</span>
-                                    <input class="form-control" type="number" min=0 max=480 name="PSQI2" required>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>3. During the past month, what time have you usually gotten up in the morning?</h4>
-                            <fieldset class="">
-                                <label><span class="">GETTING UP TIME</span>
-                                    <label><span class="">&nbsp;&nbsp;HH</span>
-                                        <select class="form-control"  id="hh1__ID" required>
-                                            <option value=""></option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                        </select>
-                                    </label>
-                                    <label><span class="">&nbsp;&nbsp;MM</span>
-                                        <select class="form-control"  id="mm1__ID">
-                                            <option value="00">00</option>
-                                            <option value="05">05</option>
-                                            <option value="10">10</option>
-                                            <option value="15">15</option>
-                                            <option value="20">20</option>
-                                            <option value="25">25</option>
-                                            <option value="30">30</option>
-                                            <option value="35">35</option>
-                                            <option value="40">40</option>
-                                            <option value="45">45</option>
-                                            <option value="50">50</option>
-                                            <option value="55">55</option>
-                                        </select>
-                                    </label>
-                                    <label><span class="">&nbsp;&nbsp;AM/PM</span>
-                                        <select class="form-control"  id="ap1__ID">
-                                            <option value="AM" selected>AM</option>
-                                            <option value="PM" >PM</option>
-                                        </select>
-                                    </label>
-                                    <input class="form-control" type="text" name="PSQI3" style='display:none'>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>4. During the past month, how many hours of <u>actual sleep</u> did you get at night?</h4>
-                            <fieldset class="">
-                                <label><span class=""> HOURS OF SLEEP PER NIGHT</span>
-                                    <input class="form-control" type="number" step="any" min=0 max=12 name="PSQI4" required>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <fieldset class="subquestions">
-                            <h4>For each of the remaining questions, tick the one best response. Please answer <u>all questions</u>.</h4>
-                        </fieldset>
-                    </div>
-                    <div class="form-group">
-                        <fieldset class="subquestions">
-                            <h4>5. During the past month, how often have you had trouble sleeping because you . . .</h4>
-                        </fieldset>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>a. Cannot get to sleep within 30 minutes</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5a" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5a" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5a" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5a" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>b. Wake up in the middle of the night or early morning</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5b" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5b" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5b" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5b" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>c. Have to get up to use the bathroom</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5c" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5c" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5c" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5c" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>d. Cannot breathe comfortably</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5d" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5d" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5d" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5d" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>e. Cough or snore loudly</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5e" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5e" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5e" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5e" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>f. Feel too cold</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5f" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5f" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5f" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5f" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>g. Feel too hot</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5g" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5g" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5g" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5g" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>h. Had bad dreams</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5h" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5h" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5h" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5h" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>i. Have pain</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5i" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5i" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5i" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI5i" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                           <fieldset class="">
-                                <h4>j. Any other reason(s) please describe:</h4>
-                                    <input class="form-control" type=text name="PSQI5j" placeholder='reason(s)' >
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div id=how_often_5__ID>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                                <h4>How often during the past month have you had trouble sleeping because of this?</h4>
-                                <div class='row px-4 pt-3'>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI5ji" id=PSQI5ji__ID value="0">
-                                            <span class="checkmark"></span> Not during the past month
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI5ji" value="1" >
-                                            <span class="checkmark"></span> Less than once a week
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI5ji" value="2" >
-                                            <span class="checkmark"></span> Once or twice a week	
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI5ji" value="3" >
-                                            <span class="checkmark"></span> Three or more times a week
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>6. During the past month, how would you rate your sleep quality overall?</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI6" value="0" required>
-                                        <span class="checkmark"></span> Very good
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI6" value="1" >
-                                        <span class="checkmark"></span> Fairly good
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI6" value="2" >
-                                        <span class="checkmark"></span> Fairly bad	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI6" value="3" >
-                                        <span class="checkmark"></span> Very bad
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>7. During the past month, how often have you taken medicine (prescribed or 'over the counter') to help you sleep?</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI7" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI7" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI7" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI7" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>8. During the past month, how often have you had trouble staying awake while driving, eating meals or engaging in social activity?</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI8" value="0" required>
-                                        <span class="checkmark"></span> Not during the past month
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI8" value="1" >
-                                        <span class="checkmark"></span> Less than once a week
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI8" value="2" >
-                                        <span class="checkmark"></span> Once or twice a week	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI8" value="3" >
-                                        <span class="checkmark"></span> Three or more times a week
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI9" value="0" required>
-                                        <span class="checkmark"></span> No problem at all
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI9" value="1" >
-                                        <span class="checkmark"></span> Only a very slight problem
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI9" value="2" >
-                                        <span class="checkmark"></span> Somewhat of a problem	
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI9" value="3" >
-                                        <span class="checkmark"></span> A very big problem
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <h4>10. Do you have a bed partner or room mate?</h4>
-                            <div class='row px-4 pt-3'>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI10" value="0" required>
-                                        <span class="checkmark"></span> No bed partner or room mate
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI10" value="1" >
-                                        <span class="checkmark"></span> Partner/room mate in other room
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI10" value="2" >
-                                        <span class="checkmark"></span> Partner in same room, but not same bed
-                                    </label>
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <label class="radiobuttons">
-                                        <input type="radio" name="PSQI10" value="3" >
-                                        <span class="checkmark"></span> Partner in same bed
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id=bedpartner__ID>
-                        <div class="form-group">
-                            <fieldset class="subquestions">
-                                <h4>If you have a room mate or bed partner, ask him/her how often in the past month you have had . . .</h4>
-                            </fieldset>
-                        </div>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                                <h4>a. Loud snoring</h4>
-                                <div class='row px-4 pt-3'>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10a"  id="PSQI10a__ID" value="0" >
-                                            <span class="checkmark"></span> Not during the past month
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10a" value="1" >
-                                            <span class="checkmark"></span> Less than once a week
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10a" value="2" >
-                                            <span class="checkmark"></span> Once or twice a week	
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10a" value="3" >
-                                            <span class="checkmark"></span> Three or more times a week
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                                <h4>b. Long pauses between breaths while asleep</h4>
-                                <div class='row px-4 pt-3'>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10b"  id="PSQI10b__ID" value="0" >
-                                            <span class="checkmark"></span> Not during the past month
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10b" value="1" >
-                                            <span class="checkmark"></span> Less than once a week
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10b" value="2" >
-                                            <span class="checkmark"></span> Once or twice a week	
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10b" value="3" >
-                                            <span class="checkmark"></span> Three or more times a week
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                                <h4>c. Legs twitching or jerking while you sleep</h4>
-                                <div class='row px-4 pt-3'>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10c"  id="PSQI10c__ID" value="0" >
-                                            <span class="checkmark"></span> Not during the past month
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10c" value="1" >
-                                            <span class="checkmark"></span> Less than once a week
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10c" value="2" >
-                                            <span class="checkmark"></span> Once or twice a week	
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10c" value="3" >
-                                            <span class="checkmark"></span> Three or more times a week
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                                <h4>d. Episodes of disorientation or confusion during sleep</h4>
-                                <div class='row px-4 pt-3'>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10d"  id="PSQI10d__ID" value="0" >
-                                            <span class="checkmark"></span> Not during the past month
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10d" value="1" >
-                                            <span class="checkmark"></span> Less than once a week
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10d" value="2" >
-                                            <span class="checkmark"></span> Once or twice a week	
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="PSQI10d" value="3" >
-                                            <span class="checkmark"></span> Three or more times a week
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="questiongroup ">
-                            <fieldset class="">
-                                    <h4>e. Other restlessness while you sleep; please describe below</h4>
-                                        <input class="form-control" type=text name="PSQI10e" placeholder='please describe here' >
-                                    </label><br>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div id=how_often_10__ID>
-                            <div class="form-group">
-                                <div class="questiongroup ">
-                                    <h4>How often during the past month have you had trouble sleeping because of this?</h4>
-                                    <div class='row px-4 pt-3'>
-                                        <div class="col-sm-12 col-lg-3">
-                                            <label class="radiobuttons">
-                                                <input type="radio" name="PSQI10ei" id="PSQI10ei__ID" value="0">
-                                                <span class="checkmark"></span> Not during the past month
-                                            </label>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-3">
-                                            <label class="radiobuttons">
-                                                <input type="radio" name="PSQI10ei" value="1" >
-                                                <span class="checkmark"></span> Less than once a week
-                                            </label>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-3">
-                                            <label class="radiobuttons">
-                                                <input type="radio" name="PSQI10ei" value="2" >
-                                                <span class="checkmark"></span> Once or twice a week	
-                                            </label>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-3">
-                                            <label class="radiobuttons">
-                                                <input type="radio" name="PSQI10ei" value="3" >
-                                                <span class="checkmark"></span> Three or more times a week
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
-                    </div>
-                </div>
-            </div>
-            <div id=S3__ID>                
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center">
-                        <span style="color:#888">3 of 3 </span> <b>Insomnia Severity Index</b>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <h4>1. Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s).</h4>
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <legend>A. Difficulty falling asleep</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                            <fieldset class="subquestions">
-                                <legend>B. Difficulty staying asleep</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                            <fieldset class="subquestions">
-                                <legend>C. Problem waking up too early</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>2. How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Very satisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="1">
-                                    <span class="checkmark no-dot">1</span> Satisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="2">
-                                    <span class="checkmark no-dot">2</span> Neutral</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="3">
-                                    <span class="checkmark no-dot">3</span> Dissatisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="4">
-                                    <span class="checkmark no-dot">4</span> Very dissatisfied</label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>3. To what extent do you consider your sleep problem to INTERFERE with your daily
-                            functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores,
-                            concentration, memory, mood, etc.) CURRENTLY?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all interfering</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much interfering</label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>4. How NOTICEABLE to others do you think your sleep problem is in terms of impairing the
-                            quality of your life?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all noticeable</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much noticeable</label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>5. How WORRIED/DISTRESSED are you about your current sleep problem?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all worried</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much worried</label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
-                    </div>
-                </div>
-            </div>
-            <div id=S4__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center">
-                        <span style="color:#888"></span> <b>Eligible for survey</b>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm text-center bg-white"><br>
-                                <h4>You are ELIGIBLE to complete the online survey exploring digital health preferences and
-                                    needs for older adults with poor sleep.<br><br>
-                                    Please read the information sheet and tick the box for consent before proceeding.<br><br>
-                                    The survey will begin on the next page.
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm text-center bg-white"><br>
-                                <h5><b>App-delivered Sleep ThERapy for Older IndiviDuals with insomnia (ASTEROID Study)<br><br>
-                                        PART A - ONLINE SURVEY<br><br>
-                                        <u>PARTICIPANT INFORMATION SHEET AND CONSENT FORM</u></b><br><br>
-                                </h5>
-                                <div class='text-left'>
-                                    <b>Introduction</b><br><br>
-                                    You are invited to take part in a survey for people with insomnia or poor sleep. In this
-                                    study, we aim to determine the digital health preferences and user experience needs in
-                                    relation to a new mobile application to improve sleep.<br><br>
-                                    You have been invited to participate in this study because you have insomnia or have poor
-                                    sleep. This Participant Information Statement (PIS) tells you about the research study.
-                                    Knowing what is involved will help you decide if you want to take part in the research.
-                                    Please read this carefully and ask questions about anything that you don’t understand or
-                                    want to know more about.<br><br>
-                                    Participation in this research is voluntary. If you do not wish to take part, you do not
-                                    have to and without consequence. If you decide you want to take part in the research study
-                                    and continue to the survey, it is assumed you consent to the details in this
-                                    document.<br><br>
-                                    <b>What is the purpose of this research?</b><br><br>
-                                    The purpose of this research is to determine the digital behaviours and User Experience (UX)
-                                    needs for a mobile sleep app in older adults from the community aged 60 years or over.
-                                    SleepFix is one such app that has been developed as a digital tool by the Woolcock Institute
-                                    to deliver digital brief behavioural therapy for insomnia (dBBTi) in adults. However, this
-                                    app has not yet been tested in or optimised for an older population. This survey will be
-                                    completed online and distributed nation-wide. It will be a key resource in optimising the
-                                    SleepFix app for the successful treatment of insomnia and poor sleep within this
-                                    population.<br><br>
-                                    The study is sponsored by the Woolcock Institute of Medical Research, supported by a grant
-                                    from the Cooperative Research Centre (CRC) for Alertness Safety and Productivity.<br><br>
-                                    <b>Who can take part in the study?</b><br><br>
-                                    You can complete the survey if you have insomnia, poor sleep and if you are aged 60 or
-                                    over.<br><br>
-                                    <b>What does participation in this research involve?</b><br><br>
-                                    This study is entirely online and anonymous. If you agree to participate, you are simply
-                                    required to fill out the online questionnaires through the secure online platform
-                                    (www.sleepsurvey.com.au). You will first be asked to complete two short questionnaires
-                                    assessing insomnia symptoms and poor sleep (5 minutes). If eligible, you will then be asked
-                                    to read this participant information sheet and give your consent by digitally ticking the “I
-                                    consent to taking part in the study” checkbox. This will allow you to progress to the online
-                                    survey (10-15 minutes). The survey consists of 22 questions about your phone usage,
-                                    preferences relating to sleep mobile application features and previous experiences with
-                                    health mobile applications. The questions will be a mix of multi-part questions, Likert-type
-                                    scale questions, yes-no and ‘select all that apply’ questions as well as some open-ended
-                                    questions. Absolutely no identifiable data will be collected.<br><br>
-                                    <b>Can I withdraw from the study once I've started?</b><br><br>
-                                    Participation in this study is entirely voluntary. You do not have to take part in it. Your
-                                    decision whether to participate will not affect your current or future relationship with the
-                                    researchers or anyone else at The University of Sydney or Woolcock Institute of Medical
-                                    Research.<br><br>
-                                    Submitting your completed questionnaire is an indication of your consent to participate in
-                                    the study. You can withdraw your responses any time before you have submitted the
-                                    questionnaire. Once you have submitted it, your responses cannot be withdrawn because they
-                                    are anonymous and therefore we will not be able to tell what data is yours.<br><br>
-                                    <b>What are the side-effects and/or risks associated with this study?</b><br><br>
-                                    Aside from giving up your time, we do not expect that there will be any risks or costs
-                                    associated with taking part in this study.<br><br>
-                                    <b>What are the benefits associated with being in the study?</b><br><br>
-                                    It is hoped that by taking part in this research, you will be providing valuable information
-                                    regarding sleep health app usage and behaviours of older adults who are poor sleepers. This
-                                    may aid in the development of a mobile application that may be effective at treating poor
-                                    sleep in this population.<br><br>
-                                    We are also offering participants who complete the survey, the opportunity to take part in a
-                                    prize draw for 1 of 3 eGift Cards valued at $200 each.<br><br>
-                                    If you wish to take part in the prize draw, you will need to provide a mobile number
-                                    following completion of the survey (on the last page). Your mobile number will then go into
-                                    a draw with the other participants who completed the survey. When the survey completion time
-                                    closes, a random draw of supplied mobile numbers will be undertaken by a researcher who is
-                                    not involved in the study. The successful participant will be notified by a telephone call
-                                    to the mobile number. Please note, participation in the prize draw is voluntary.<br><br>
-                                    <b>How do I access the results of the study?</b><br><br>
-                                    You have a right to receive feedback about the overall results of this study. You can tell
-                                    us that you wish to receive feedback by providing your contact details in the survey. This
-                                    feedback will be in the form of a summary of the project’s findings. You will receive this
-                                    feedback after the study is finished.<br><br>
-                                    <b>What will happen to the data I enter?</b><br><br>
-                                    All information obtained during this study is anonymous as we collect no personal
-                                    identification. By providing consent, you are agreeing to these conditions and understand
-                                    that any data published in scientific journals will not identify you.<br><br>
-                                    All questionnaire and survey data will be captured on an encrypted web-based database
-                                    connected through the backend of the public-facing study website (www.sleepsurvey.com.au)
-                                    via a securely encrypted link. The database is stored securely using password protection
-                                    that only authorised research members have access to.<br><br>
-                                    Any contact details you enter for either the prize draw, or to receive study outcome
-                                    information will be collated in a separate file on the database that will not be attached to
-                                    your survey responses. These files will be permanently deleted once their purpose has been
-                                    fulfilled.<br><br>
-                                    <b>Contact Information</b><br><br>
-                                    If you still have questions or require more information after reading this document, Dr
-                                    Christopher Gordon and his team are available at Telephone: +61 2 9114 0481 or email:
-                                    SleepFix@woolcock.org.au<br><br>
-                                    <b>Ethics approval and complaints</b><br><br>
-                                    The ethical aspects of this research project have been approved by the Sydney Local Health
-                                    District (SLHD) Health Research Ethics Committee (HREC). This project will be carried out
-                                    according to the National Statement on Ethical Conduct in Human Research (2007, updated
-                                    2018). This statement has been developed to protect the interests of people who agree to
-                                    participate in human research studies. Should you wish to discuss the study or view a copy
-                                    of the Complaint procedure with someone not directly involved, particularly in relation to
-                                    matters concerning policies, information or
-                                    complaints about the conduct of the study or your rights as a participant, you may contact
-                                    the HREC Executive Officer, Merela Ghazal, on 02 9515 6766 or email
-                                    SLHD-RPAEthics@health.nsw.gov.au
-                                    <hr>
-                                    <b>In giving my consent, I state that:</b><br><br>
-                                    I have read and understood the Online Survey Participant Information Sheet Version 1.0
-                                    (July, 2021) for the above named research study.
-                                    <ul>
-                                        <li>I am aware that there is minimal risk with the procedures involved in this study.
-                                        </li>
-                                        <li>The researchers have answered any questions that I had about the study, and I am
-                                            happy with the answers.</li>
-                                        <li>I freely choose to participate in this study and understand that I can withdraw at
-                                            any time up until I submit the completed survey.</li>
-                                        <li>I understand that the research survey is strictly confidential, and my answers are
-                                            anonymous.</li>
-                                    </ul>
-                                    By ticking this box, I hereby agree to participate in all aspects of this research
-                                    study.<br><br>
-        
-                                </div>
-                                <div class="form-group text-left container">
-                                    <div class="questiongroup">
-                                        <fieldset>
-                                            <label class="checkboxes">
-                                                <input type="checkbox" name="Consent" id=consent__ID>
-                                                <span class="check_checkmark"></span> I consent to taking part in the study.
-                                            </label>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-sm-12" id=pdfs__ID>
-                                    <a href="m/Online Survey PISCF.pdf" target="_blank">
-                                        <div class="downloads text-left">
-                                            <div class="col-lg-12 col-sm-12 pl-0 pr-0"> <img src="images/pdf-icon.png"
-                                                    width="48" height="auto" alt="download pdf" />
-                                                <h5>Participant's Information Sheet</h5>
-                                                <p>Click here to download this document as a PDF</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="text-align:right">
-                            <button type="submit" id=submit1__ID d=1 class="btn btn-success btn-lg button">Next</button>
-                        </div>
-                    </div>        
-                </div>
-            </div>
-        </form>
+            <!-- /content-right-->
+        </div>
+        <!-- /row-->
     </div>
+    <!-- /container-fluid -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Information sheet</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+				<div align="right">
+                    <a href="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" download="">Download a copy of the Information Sheet
+                    <img src="https://img.icons8.com/office/40/000000/pdf.png"></a>
+                </div>    
+                <object data="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" type="application/pdf" frameborder="0" width="100%" height="2000px">
+                <embed src="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" width="100%" height="2000px"/> 
+                </object>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
     <script>
         function F__ID() {
-            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: '__COMPONENT__/f/form.01.js'
             //---------------------------------------
-            var N = 4;
+            var N = 21;
             var current_I = 1;
             //---------------------------------------
             m.before_submit = function (data, index) {
@@ -1318,7 +875,9 @@
                 $('#submit1__ID').show();
                 $('#q4-1__ID').hide();
                 $('#shift__ID').removeAttr('required');
-                show_section(1);
+                $('#submit1__ID').css('display','none')
+                show_section(16);
+                console.log("Load")
                 //-- PSQI ---------------------------             
                 if($("input[name='PSQI5j']").val()!=''){
                     $('#PSQI5ji__ID').prop('required', true);
@@ -1430,6 +989,7 @@
             $('#F__ID button').on('click', function (event) {
                 var d = $(this).attr("d");
                 d = parseInt(d);
+                console.log(d)
                 if (d < 0) show_section(current_I - 1);
                 else {
                     //do nothing, m.submit will handle  
@@ -1446,6 +1006,7 @@
                 $('#S' + I + '__ID').show();
                 $('#S' + I + "__ID * ").removeAttr('disabled');
                 current_I = I;
+                console.log(I)
                 $(window).scrollTop(0);
             }
             //-------------------------------------
@@ -1458,6 +1019,7 @@
             var scores={};
             //---------------------------------------
             var calc_scores=function(){
+                console.log("CALC SCORES")
                 //ISI-------------------
                 scores.ISI=(
                     parseInt($("input[name='ISI_2']:checked").val())+
@@ -1612,6 +1174,14 @@
                     }
                     else {
                         show_section(current_I + 1);
+                        if (current_I == N){
+                            console.log("Hide")
+                            $("#submit1__ID").css('display','inline-block');
+                            $("#next__ID").css('display','none');
+                            $("#previous__ID").css('display','none');
+
+                        }
+                        console.log("Success")
                     }
                 }
                 else if (current_I == N) {
@@ -1624,7 +1194,10 @@
                         $vm.alert("You must tick the consent box to be able to continue.")
                     }
                 }
-                else show_section(current_I + 1);
+                else {
+                    show_section(current_I + 1);
+                    console.log("submit")
+                }
             }
             var consented = false;
             $('#consent__ID').on('change', function () {
@@ -1638,64 +1211,41 @@
                 if (m.prefix == undefined) { $vm.load_module('dsa-survey-form', '', {entry_id:uid}); }
                 else $vm.load_module(m.prefix + 'dsa-survey-form', '', {entry_id:uid});
             }
+            //--------------------------
+            $('input[name=disorders]').change(function() {
+                console.log("AAA")
+                var value = [];
+                $("input[name*='disorders']").each(function () {
+                    // Get all checked checboxes in an array
+                    if (jQuery(this).is(":checked")) {
+                        value.push($(this).val());
+                    }
+                });
+                $("#disorders").val(value.join(", "));
+                console.log( $("#disorders").val())
+             })
+            //--------------------------
+            $('input[name=None]').change(function() {
+                if( $('input[name=None]').is(':checked')) $("#disorders").val('None')
+                console.log( $("#disorders").val())
+             })
+            //---------------------------
         }
     </script>
-    <style>
-        #D__ID {
-            font-family: 'Roboto Slab';
-            animation: vm_module_fadein 1.0s;
-            color: #000;
-            background-color: rgb(255,255,255,0.8);
-            min-height: 800px;
-        }
-        #D__ID button{
-            border-radius:2rem;
-            background-color: #13B51F;
-            width:180px;height:60px;
-        }
-        #D__ID button:hover{
-            border-radius:2rem;
-            background-color: #013604;
-            width:180px;height:60px;
-        }
-        #D__ID .downloads {
-            border-top-style: solid;
-            border-top-color: white;
-            border-top-width: 1px;
-            display: inline-block;
-            width: 100%;
-            padding-top: 10px;
-            margin-top: 10px;
-            margin-bottom: -10px;
-        }
+    	<script type="text/javascript">  
+            function Selectall(){  
+                var ele=document.getElementsByName('disorders');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=true;  
+                }  
+            }  
+            function deSelectall(){  
+                var ele=document.getElementsByName('disorders');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=false;                     
+                }
 
-        #D__ID .downloads:hover {
-            opacity: 0.95;
-        }
-
-        #D__ID .downloads h5 {
-            font-family: 'Roboto Slab';
-            font-size: 22px;
-            color: #45496A;
-            letter-spacing: 0;
-        }
-
-        #D__ID .downloads h5:hover {
-            text-decoration: underline;
-        }
-
-        #D__ID .downloads p {
-            font-family: 'Nunito Sans';
-            font-size: 14px;
-            color: #000;
-            letter-spacing: 0;
-        }
-
-        #D__ID .downloads img {
-            float: right;
-            margin-left: 5px
-        }
-
-        VmInclude:__CURRENT_PATH__/wappsystem-form.css
-    </style>
-</div>
+            }
+    </script>
