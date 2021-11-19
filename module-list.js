@@ -5,7 +5,7 @@
         "survey-data": {url:"$H/m/elig-questions-data.html",Table:"asteroid-survey-record",form_module:"survey-form",router:1},
         "survey-form": {url:"$H/m/elig-questions-form.html",Table:"asteroid-survey-record"},
         "dsa-survey-data": {url:"$H/m/dsa-data.html",Table:"asteroid-dsa-survey-record",form_module:"dsa-survey-form",router:1},
-        "dsa-survey-form": {url:"$H/m/dsa-form.html",Table:"asteroid-dsa-survey-record"},
+        "dsa-survey-form": {url:"$H/m/dsa-form.html",Table:"asteroid-dsa-survey-record",router:1},
         
     }
     for(p in modules){
