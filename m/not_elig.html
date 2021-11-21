@@ -1,56 +1,47 @@
 <div id=D__ID>
-    <form id="F__ID">
-        <div class="row mr-0 ml-0 p-3" style="background-color:#efefef;">
-            <div class="col-lg-4 col-sm-0 text-center">
-            </div>
-            <div class="col-lg-4 col-sm-12 text-center">
-                <span style="color:rgb(24, 24, 24)">
-                    <h3><b>Thank you for completing these questions. </b></h3>
+    <div class="container-fluid full-height">
+        <div class="row row-height">
+            <div class="col-lg-6 content-left">
+                <div class="content-left-wrapper">
+                    <a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
+                    <div>
+                        <h2>Welcome to the digital health survey to explore digital health preferences and needs for older adults with poor sleep.</h2>
+                        <h3>Your responses to this survey will help us decide the most important requirements for the optimisation of our new sleep therapy app for this population.</h3>
+                        <p>You are eligible to complete the survey if you are:</p>
+                            <p>1. Over 60 years<br>
+                                2. Have insomnia symptoms or meet criteria for a poor sleeper</p>
+                            <p>All answers are anonymous and absolutely no identifiable data will be collected.</p>
+                            <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference #XXX-XXX</small><br><br>
+                        <a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
+                    </div>
+                    <div class="copy"><img src="img/footer_logos.png" Width="65%" Height="65%">
+                    </div>
+                </div>
 
+                <!-- /content-left-wrapper -->
             </div>
-            <div class="col-lg-4 col-sm-0 text-center">
-            </div>
-        </div>
-        <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-            <div class="form-group">
-                <div class="row">
+            <!-- /content-left -->
+            <div class="col-lg-6 content-right">
+                <div class="content-right-wrapper">
                     <div class="col-sm text-center bg-white"><br>
-                        <h4>Unfortunately, you are INELIGIBLE to complete the digital health preferences survey at this
+                        <h2><b>Thank you for completing these questions. </b></h2><br>
+                        <h6>Unfortunately, you are INELIGIBLE to complete the digital health preferences survey at this
                             time.<br><br>
                             If you are worried about your sleep, please contact your GP or other health professional and
                             for more information about sleep, visit the
                             <a href="https://www.sleephealthfoundation.org.au" target=_blank>Sleep Health Foundation
                                 Website</a>
-                        </h4>
+                        </h6>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
     <script>
         function F__ID() {
             //-------------------------------------
-            VmInclude: '__COMPONENT__/f/form.01.js'
-            //-------------------------------------
-            m.default_load = m.load;
-            m.load = function () {
-                $('#header').css('opacity', '0.8');
-                m.default_load();
-                $('#D__ID').scrollTop(0);
-                $(window).scrollTop(0);
-            }
-
         }
     </script>
     <style>
-        #D__ID {
-            font-family: 'Roboto Slab';
-            animation: vm_module_fadein 1.0s;
-            color: #000;
-            background-color: rgb(255, 255, 255, 0.8);
-            min-height: 800px;
-        }
-
-        VmInclude:__CURRENT_PATH__/wappsystem-form.css
     </style>
 </div>

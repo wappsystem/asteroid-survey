@@ -361,7 +361,7 @@ a.btn_1.rounded,
   color: #fff;
   text-align: center;
   position: relative;
-  background-image: url("img/stars.png");
+  background-image: url("../img/stars.png");
 }
 @media (max-width: 991px) {
   .content-left-wrapper {
