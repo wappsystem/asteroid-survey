@@ -143,8 +143,48 @@
                                 <p>Please answer all questions.</p>
                                 <div class="form-group">
                                     <p>During the past month, what time have you usually gone to bed at night?</p>
-                                    <p>BED TIME</p>
-                                    <input type="time" name="PSQI1" class="form-control" required>
+                                    <label><span class="">BED TIME</span>
+                                        <label><span class="">&nbsp;&nbsp;HH</span>
+                                            <select class="form-control"  id="hh__ID" required>
+                                                <option value=""></option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                            </select>
+                                        </label>
+                                        <label><span class="">&nbsp;&nbsp;MM</span>
+                                            <select class="form-control"  id="mm__ID">
+                                                <option value="00">00</option>
+                                                <option value="05">05</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                            </select>
+                                        </label>
+                                        <label><span class="">&nbsp;&nbsp;AM/PM</span>
+                                            <select class="form-control"  id="ap__ID">
+                                                <option value="AM">AM</option>
+                                                <option value="PM" selected >PM</option>
+                                            </select>
+                                        </label>
+                                        <input class="form-control" type="text" name="PSQI1" style='display:none'>
+                                    </label><br>        
                                 </div>
                                 <div class="form-group">
                                     <p>During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</p>
@@ -155,8 +195,48 @@
                                 <h3 class="main_question"><strong>5/20</strong></h3>
                                 <div class="form-group">
                                     <p>During the past month, what time have you usually gotten up in the morning?</p>
-                                    <p>GETTING UP TIME</p>
-                                    <input type="time" name="PSQI3" class="form-control"  required>
+                                    <label><span class="">GETTING UP TIME</span>
+                                        <label><span class="">&nbsp;&nbsp;HH</span>
+                                            <select class="form-control"  id="hh1__ID" required>
+                                                <option value=""></option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                            </select>
+                                        </label>
+                                        <label><span class="">&nbsp;&nbsp;MM</span>
+                                            <select class="form-control"  id="mm1__ID">
+                                                <option value="00">00</option>
+                                                <option value="05">05</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                            </select>
+                                        </label>
+                                        <label><span class="">&nbsp;&nbsp;AM/PM</span>
+                                            <select class="form-control"  id="ap1__ID">
+                                                <option value="AM" selected>AM</option>
+                                                <option value="PM" >PM</option>
+                                            </select>
+                                        </label>
+                                        <input class="form-control" type="text" name="PSQI3" style='display:none'>
+                                    </label><br>
                                 </div>
                                 <div class="form-group">
                                     <p>During the past month, how many hours of <u>actual sleep</u> did you get at night?</p>
@@ -904,7 +984,7 @@
                 if(ap == "PM" && hh<12) hh = hh+12;
                 if(ap == "AM" && hh==12) hh = hh-12;
                 hh = hh < 10 ? "0" + hh : hh;
-                //console.log("PSQI1: "+hh+':'+mm);
+                console.log("PSQI1: "+hh+':'+mm);
                 return hh+':'+mm
             }
             $("#D__ID #hh1__ID").on('change', function () {
@@ -923,7 +1003,7 @@
                 if(ap == "PM" && hh<12) hh = hh+12;
                 if(ap == "AM" && hh==12) hh = hh-12;
                 hh = hh < 10 ? "0" + hh : hh;
-                //console.log("PSQI3: "+hh+':'+mm);
+                console.log("PSQI3: "+hh+':'+mm);
                 return hh+':'+mm
             }
 
