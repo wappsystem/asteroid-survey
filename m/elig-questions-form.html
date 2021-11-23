@@ -6,13 +6,15 @@
 					<a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
 					<div>
 						<h2>Welcome to the digital health survey to explore digital health preferences and needs for older adults with poor sleep.</h2>
-						<h3>Your responses to this survey will help us decide the most important requirements for the optimisation of our new sleep therapy app for this population.</h3>
-						<p>You are eligible to complete the survey if you are:</p>
+						<h3>Your responses to this survey will help determine the digital health preferences and user experience needs in a new mobile application to improve sleep.</h3>
+						<h3>You are eligible to complete the survey if you are:</h3>
 						    <p>1. Over 60 years<br>
 						       2. Have insomnia symptoms or meet criteria for a poor sleeper</p>
-						    <p>All answers are anonymous and absolutely no identifiable data will be collected.</p>
-						    <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference #XXX-XXX</small><br><br>
-						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
+						    <p>All answers are anonymous and absolutely no identifiable data will be collected. To establish whether you are eligible to complete the survey, please complete the screening questionnaires (5 minutes).</p>
+						    <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference X21-0265</small><br><br>
+                            <p><i>Read the <u><a style='color:white' href="m/Online Survey PISCF.pdf" target="_blank">Participant information Statement Here</a></u> to learn more about the research study or contact the research team at sleepfix@woolcock.org.au</i></p>
+						    
+						<!--<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>-->
 					</div>
 					<div class="copy"><img src="img/footer_logos.png" Width="65%" Height="65%">
 					</div>
@@ -31,7 +33,7 @@
                         <input id="website" name="website" type="text" value="">
                         <div id="middle-wizard">
                             <div id=S1__ID>
-                                <h3 class="main_question"><strong>1/20</strong>Determine your eligiblity here</h3>
+                                <h3 class="main_question"><strong>1/16</strong>Determine your eligiblity here</h3>
                                 <div class="form-group">
                                 <p>What is your age?</p>
                                     <input type="number" name="age" class="form-control" placeholder="Age" required>
@@ -61,7 +63,7 @@
                                 <!-- /row -->
                             </div>
                             <div id=S2__ID>
-                                <h3 class="main_question"><strong>2/20</strong></h3>
+                                <h3 class="main_question"><strong>2/16</strong></h3>
                                 <div class="form-group">
                                 <p>Are you a shift-worker (in a regular work week)? <br>Choose from</p>
                                     <label class="container_radio">No
@@ -94,49 +96,61 @@
                                 </div>									
                             </div>
                             <div id=S3__ID>
-                                <h3 class="main_question"><strong>3/20</strong></h3>
-                                <p>Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?</p>
-                                <p>Select all that apply</p>
+                                <h3 class="main_question"><strong>3/16</strong></h3>
                                 <div class="form-group">
-                                    <label class="container_check version_2">Major Depressive Disorder 
-                                        <input type="checkbox" name="disorders" value="Major Depressive Disorder" >
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <p>Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?</p>
+                                    <fieldset class="pl-4 p-1">Major Depressive Disorder<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="depression" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="depression" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
+                                    <fieldset class="pl-4 p-1">Heart failure<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="heart_failure" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="heart_failure" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
+                                    <fieldset class="pl-4 p-1">Epilepsy<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="epilepsy" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="epilepsy" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
+                                    <fieldset class="pl-4 p-1">Bi-polar disorder<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="bipolar" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="bipolar" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
+                                    <fieldset class="pl-4 p-1">Dementia<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="dementia" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="dementia" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
+                                    <fieldset class="pl-4 p-1">Mild Cognitive Impairment<br>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="cognitive_impairment" value="Y" required>
+                                            <span class="checkmark"></span>Yes</label>
+                                        <label class="container_radio ">
+                                            <input type="radio" name="cognitive_impairment" value="N">
+                                            <span class="checkmark"></span>No </label>
+                                    </fieldset>
                                 </div>
-                                <div class="form-group">
-                                    <label class="container_check version_2">Heart failure 
-                                        <input type="checkbox" name="disorders" value="Heart failure">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="container_check version_2">Epilepsy 
-                                        <input type="checkbox" name="disorders" value="Epilepsy">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="container_check version_2">Bipolar disorder
-                                        <input type="checkbox" name="disorders" value="Bi-polar disorder">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="container_check version_2">Dementia 
-                                        <input type="checkbox" name="disorders" value="Dementia">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="container_check version_2">Mild Cognitive Impairment 
-                                        <input type="checkbox" name="disorders" value="Mild Cognitive Impairment">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <input style=display:none type=text name=illness_disorder id=disorders >								
                             </div>
                             <div id=S4__ID>
-                                <h3 class="main_question"><strong>4/20</strong></h3>
+                                <h3 class="main_question"><strong>4/16</strong></h3>
                                 <p>The following questions relate to your usual sleep habits during the past month <u>only</u>.  
                                     Your answers should indicate the most accurate reply for the <u>majority</u> of days and nights in the past month.
                                 </p>
@@ -192,7 +206,7 @@
                                 </div>    
                             </div>
                             <div id=S5__ID>
-                                <h3 class="main_question"><strong>5/20</strong></h3>
+                                <h3 class="main_question"><strong>5/16</strong></h3>
                                 <div class="form-group">
                                     <p>During the past month, what time have you usually gotten up in the morning?</p>
                                     <label><span class="">GETTING UP TIME</span>
@@ -244,7 +258,7 @@
                                 </div>
                             </div>
                             <div id=S6__ID>
-                                <h3 class="main_question"><strong>6/20</strong></h3>
+                                <h3 class="main_question"><strong>6/16</strong></h3>
                                 <p>For each of the remaining questions, tick the one best response.</p>
                                 <p>During the past month, how often have you had trouble sleeping because you . . .</p>
                                 <div class="form-group">
@@ -287,7 +301,7 @@
                                 </div>
                             </div>
                             <div id=S7__ID>
-                                <h3 class="main_question"><strong>7/20</strong></h3>
+                                <h3 class="main_question"><strong>7/16</strong></h3>
                                 <p>During the past month, how often have you had trouble sleeping because you . . .</p>
                                 <div class="form-group">
                                     <p>Have to get up to use the bathroom</p>
@@ -329,7 +343,7 @@
                                 </div>
                             </div>
                             <div id=S8__ID>
-                                <h3 class="main_question"><strong>8/20</strong></h3>
+                                <h3 class="main_question"><strong>8/16</strong></h3>
                                 <p>During the past month, how often have you had trouble sleeping because you . . .</p>
                                 <div class="form-group">
                                     <p>Cough or snore loudly</p>
@@ -371,7 +385,7 @@
                                 </div>
                             </div>
                             <div id=S9__ID>
-                                <h3 class="main_question"><strong>9/20</strong></h3>
+                                <h3 class="main_question"><strong>9/16</strong></h3>
                                 <p>During the past month, how often have you had trouble sleeping because you . . .</p>
                                 <div class="form-group">
                                     <p>Feel too hot</p>
@@ -413,7 +427,7 @@
                                 </div>
                             </div>
                             <div id=S10__ID>
-                                <h3 class="main_question"><strong>10/20</strong></h3>
+                                <h3 class="main_question"><strong>10/16</strong></h3>
                                 <p>During the past month, how often have you had trouble sleeping because you . . .</p>
                                 <div class="form-group">
                                     <p>Have pain</p>
@@ -459,7 +473,7 @@
                                 </div>
                             </div>
                             <div id=S11__ID>
-                                <h3 class="main_question"><strong>11/20</strong></h3>
+                                <h3 class="main_question"><strong>11/16</strong></h3>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <p>During the past month, how would you rate your sleep quality overall?</p>
@@ -502,7 +516,7 @@
                                 </div>
                             </div>
                             <div id=S12__ID>
-                                <h3 class="main_question"><strong>12/20</strong></h3>
+                                <h3 class="main_question"><strong>12/16</strong></h3>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <p>During the past month, how often have you had trouble staying awake while driving, eating meals or engaging in social activity?</p>
@@ -545,7 +559,7 @@
                                 </div>
                             </div>
                             <div id=S13__ID>
-                                <h3 class="main_question"><strong>13/20</strong></h3>
+                                <h3 class="main_question"><strong>13/16</strong></h3>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <p> Do you have a bed partner or room mate?</p>
@@ -569,7 +583,7 @@
                                 </div>
                             </div>
                             <div id=S14__ID>
-                                <h3 class="main_question"><strong>14/20</strong></h3>
+                                <h3 class="main_question"><strong>14/16</strong></h3>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
@@ -613,7 +627,7 @@
                                 </div>
                             </div>
                             <div id=S15__ID>
-                                <h3 class="main_question"><strong>15/20</strong></h3>
+                                <h3 class="main_question"><strong>15/16</strong></h3>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
@@ -657,7 +671,7 @@
                                 </div>
                             </div>
                             <div id=S16__ID>
-                                <h3 class="main_question"><strong>16/20</strong></h3>
+                                <h3 class="main_question"><strong>16/16</strong></h3>
                                 <p>If you have a room mate or bed partner, ask him/her how often in the past month you have had ...</p>
                                 <div class="form-group">
                                     <p>Other restlessness while you sleep; please describe below</p>
@@ -684,7 +698,7 @@
                                 </div>
                             </div>
                             <div id=S17__ID>
-                                <h3 class="main_question"><strong>17/20</strong></h3>
+                                <h3 class="main_question"><strong>13/16</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
                                     <p>Difficulty falling asleep</p>
@@ -734,7 +748,7 @@
                                 </div>
                             </div>
                             <div id=S18__ID>
-                                <h3 class="main_question"><strong>18/20</strong></h3>
+                                <h3 class="main_question"><strong>14/16</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
                                     <p>Problem waking up too early</p>
@@ -784,7 +798,7 @@
                                 </div>
                             </div>
                             <div id=S19__ID>
-                                <h3 class="main_question"><strong>19/20</strong></h3>
+                                <h3 class="main_question"><strong>15/16</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
                                     <p>To what extent do you consider your sleep problem to INTERFERE with your daily
@@ -830,14 +844,14 @@
                                         <input type="radio" name="ISI_4" value="3" >
                                         <span class="checkmark">&nbsp;3</span>
                                     </label>
-                                    <label class="container_radio">Very Very much noticeable
+                                    <label class="container_radio">Very much noticeable
                                         <input type="radio" name="ISI_4" value="4" >
                                         <span class="checkmark">&nbsp;4</span>
                                     </label>
                                 </div>
                             </div>
                             <div id=S20__ID>
-                                <h3 class="main_question"><strong>20/20</strong></h3>
+                                <h3 class="main_question"><strong>16/16</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
                                     <p>How WORRIED/DISTRESSED are you about your current sleep problem?</p>
@@ -1059,7 +1073,7 @@
                 d = parseInt(d);
                 //console.log(d)
                 if (d < 0) {
-                    if(current_I===17 && $("input[name='PSQI10']:checked").val()=='0') current_I=14;
+                    if(current_I===17) current_I=12;
                     show_section(current_I - 1);
                 }
                 else {
@@ -1072,12 +1086,14 @@
                     $('#S' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
                     $('#S' + i + "__ID * ").attr('disabled', 'disabled');
                 }
-                if (I < 1) { I = 1; $('#S' + I + '__ID').show(); }
+                if (I < 1) { I = 1; $('#S' + I + '__ID').show();}
                 if (I >= N) I = N;
                 $('#S' + I + '__ID').show();
                 $('#S' + I + "__ID * ").removeAttr('disabled');
                 current_I = I;
-                //console.log(I)
+                if(current_I==1) $('#previous__ID').hide();
+                else  $('#previous__ID').show();
+                console.log("show: "+I)
                 $(window).scrollTop(0);
             }
             //-------------------------------------
@@ -1229,7 +1245,12 @@
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         parseInt($("input[name='shift-worker']:checked").val()) > 0 ||
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
-                        $("input[name='illness_disorder']").val() != '' ||
+                        $("input[name='depression']:checked").val() == 'Y' ||
+                        $("input[name='heart_failure']:checked").val() == 'Y' ||
+                        $("input[name='epilepsy']:checked").val() == 'Y' ||
+                        $("input[name='bipolar']:checked").val() == 'Y' ||
+                        $("input[name='dementia']:checked").val() == 'Y' ||
+                        $("input[name='cognitive_impairment']:checked").val() == 'Y' ||
                         scores.ISI < 10 ||
                         scores.PSQI < 6) 
                         {
@@ -1259,8 +1280,39 @@
                         $vm.alert("You must tick the consent box to be able to continue.")
                     }
                 }
-                else {
-                    if(current_I===13 && $("input[name='PSQI10']:checked").val()=='0') current_I=16;
+                else if(current_I==3){                    
+                    if (parseInt($("input[name='age']").val()) < 60 ||
+                        $("input[name='englishfluency']:checked").val() == 'N' ||
+                        $("input[name='smartphone']:checked").val() == 'N' ||
+                        parseInt($("input[name='shift-worker']:checked").val()) > 0 ||
+                        $("input[name='travel2hours']:checked").val() == 'Y' ||
+                        $("input[name='depression']:checked").val() == 'Y' ||
+                        $("input[name='heart_failure']:checked").val() == 'Y' ||
+                        $("input[name='epilepsy']:checked").val() == 'Y' ||
+                        $("input[name='bipolar']:checked").val() == 'Y' ||
+                        $("input[name='dementia']:checked").val() == 'Y' ||
+                        $("input[name='cognitive_impairment']:checked").val() == 'Y')
+                    {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                    }
+                    show_section(current_I + 1);
+                }
+                else if(current_I==12){ 
+                    calc_scores()
+                    if (scores.PSQI < 6)
+                    {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                    }
+                    current_I=16;
+                    show_section(current_I + 1);
+                }
+                else{
                     show_section(current_I + 1);
                 }
             }

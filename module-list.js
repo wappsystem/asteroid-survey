@@ -3,9 +3,9 @@
         "not_elig":         {url:"$H/m/not_elig.html"},
         "thanks":         {url:"$H/m/thanks.html"},
         "eligible":    {url:"$H/m/eligible.html"},
-        "survey-data": {url:"$H/m/elig-questions-data.html",Table:"asteroid-survey-record",form_module:"survey-form",router:1},
+        "survey-data": {url:"$H/m/elig-questions-data.html",Table:"asteroid-survey-record",form_module:"survey-form"},
         "survey-form": {url:"$H/m/elig-questions-form.html",Table:"asteroid-survey-record"},
-        "dsa-survey-data": {url:"$H/m/dsa-data.html",Table:"asteroid-dsa-survey-record",form_module:"dsa-survey-form",router:1},
+        "dsa-survey-data": {url:"$H/m/dsa-data.html",Table:"asteroid-dsa-survey-record",form_module:"dsa-survey-form"},
         "dsa-survey-form": {url:"$H/m/dsa-form.html",Table:"asteroid-dsa-survey-record"},
         
     }
