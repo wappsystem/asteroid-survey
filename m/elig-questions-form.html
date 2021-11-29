@@ -8,7 +8,7 @@
 						<h2>Welcome to the digital health survey to explore digital health preferences and needs for older adults with poor sleep.</h2>
 						<h3>Your responses to this survey will help determine the digital health preferences and user experience needs in a new mobile application to improve sleep.</h3>
 						<h3>You are eligible to complete the survey if you are:</h3>
-						    <p>1. Over 60 years<br>
+						    <p>1. 60 years or over<br>
 						       2. Have insomnia symptoms or meet criteria for a poor sleeper</p>
 						    <p>All answers are anonymous and absolutely no identifiable data will be collected. To establish whether you are eligible to complete the survey, please complete the screening questionnaires (5 minutes).</p>
 						    <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference X21-0265</small><br><br>
@@ -84,7 +84,7 @@
                                             </label>
                                 </div>
                                 <div class="form-group">
-                                <p>Have you travelled to a destination with 2 hours time difference last 30 days? </p>
+                                <p>Have you travelled to a destination with 2 hours time difference in the last 30 days? </p>
                                             <label class="container_radio">Yes
                                                 <input type="radio" name="travel2hours" value="Y" required>
                                                 <span class="checkmark"></span>
@@ -99,54 +99,15 @@
                                 <h3 class="main_question"><strong>3/16</strong></h3>
                                 <div class="form-group">
                                     <p>Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?</p>
-                                    <fieldset class="pl-4 p-1">Major Depressive Disorder<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="depression" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="depression" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
-                                    <fieldset class="pl-4 p-1">Heart failure<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="heart_failure" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="heart_failure" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
-                                    <fieldset class="pl-4 p-1">Epilepsy<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="epilepsy" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="epilepsy" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
-                                    <fieldset class="pl-4 p-1">Bi-polar disorder<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="bipolar" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="bipolar" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
-                                    <fieldset class="pl-4 p-1">Dementia<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="dementia" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="dementia" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
-                                    <fieldset class="pl-4 p-1">Mild Cognitive Impairment<br>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="cognitive_impairment" value="Y" required>
-                                            <span class="checkmark"></span>Yes</label>
-                                        <label class="container_radio ">
-                                            <input type="radio" name="cognitive_impairment" value="N">
-                                            <span class="checkmark"></span>No </label>
-                                    </fieldset>
+                                    <p><i>Major Depressive Disorder, Heart failure, Epilepsy, Bi-polar disorder, Dementia, Mild Cognitive Impairment</i></p>
+                                    <label class="container_radio ">
+                                        <input type="radio" name="illness" value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="container_radio ">
+                                        <input type="radio" name="illness" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
                                 </div>
                             </div>
                             <div id=S4__ID>
@@ -1245,12 +1206,7 @@
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         parseInt($("input[name='shift-worker']:checked").val()) > 0 ||
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
-                        $("input[name='depression']:checked").val() == 'Y' ||
-                        $("input[name='heart_failure']:checked").val() == 'Y' ||
-                        $("input[name='epilepsy']:checked").val() == 'Y' ||
-                        $("input[name='bipolar']:checked").val() == 'Y' ||
-                        $("input[name='dementia']:checked").val() == 'Y' ||
-                        $("input[name='cognitive_impairment']:checked").val() == 'Y' ||
+                        $("input[name='illness']:checked").val() == 'Y' ||
                         scores.ISI < 10 ||
                         scores.PSQI < 6) 
                         {
@@ -1286,12 +1242,7 @@
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         parseInt($("input[name='shift-worker']:checked").val()) > 0 ||
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
-                        $("input[name='depression']:checked").val() == 'Y' ||
-                        $("input[name='heart_failure']:checked").val() == 'Y' ||
-                        $("input[name='epilepsy']:checked").val() == 'Y' ||
-                        $("input[name='bipolar']:checked").val() == 'Y' ||
-                        $("input[name='dementia']:checked").val() == 'Y' ||
-                        $("input[name='cognitive_impairment']:checked").val() == 'Y')
+                        $("input[name='illness']:checked").val() == 'Y')
                     {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);

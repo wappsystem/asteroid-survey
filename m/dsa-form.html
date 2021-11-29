@@ -7,7 +7,7 @@
 					<div>
 						<h2>We need your help!</h2><br>
 						<h3>Fill out the following survey and share your thoughts to help us understand more about what would be relevant and helpful when using a sleep health mobile application.</h3><br>
-						<h3>Once you have completed it, you’ll be in the running to win one of three $200 eGift Vouchers!</h3>
+						<h3>Once you have completed it, you may be in the running to win one of three $200 eGift Vouchers!</h3>
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
 					<div class="copy"><img src="img/footer_logos.png" Width="65%" Height="65%">
@@ -609,11 +609,13 @@
                                         <span class="checkmark"></span> No
                                     </label>
                                 </div>
-                                <div class="form-group">
-                                    <p>I am happy to provide the following mobile number and if successful in the Prize Draw be contacted by a member of the research team to receive the prize.</p>                           
-                                    <label ><span class=""></span>
-                                        <input class='form-control' type="text" name="mobile" placeholder="Mobile number">
-                                    </label>                                
+                                <div id=voucher__ID style='display:none'>
+                                    <div class="form-group">
+                                        <p>I am happy to provide the following mobile number and if successful in the Prize Draw be contacted by a member of the research team to receive the prize.</p>                           
+                                        <label ><span class=""></span>
+                                            <input class='form-control' type="text" name="mobile" placeholder="Mobile number">
+                                        </label>                                
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <p>If you would like to receive a summary of our findings following the study, please enter your email address here:</p>                           
@@ -821,6 +823,15 @@
 
                 }
             });
+            $("input[name='voucher']").on('change', function () {
+                console.log($("input[name='voucher']:checked").val())
+                if($("input[name='voucher']:checked").val()=='Yes'){
+                    $('#voucher__ID').show();
+                }
+                else{
+                    $('#voucher__ID').hide();
+                }
+            })
         }
       //------------------------------------
     </script>
