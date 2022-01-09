@@ -32,16 +32,8 @@
         <link href="css/vendors.css" rel="stylesheet">
         
         <!-- MODERNIZR MENU -->
-        <script src="js/modernizr.js"></script>            
-    </head>
-    <body>
-        <!-- Typical website layout, the contents are dynamiclly updated by modules-->
-        <div id=header></div>
-        <div id=content></div>
-        <div id=footer></div>
-        <div id=app style='display:none'></div>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
-
+        <script src="js/modernizr.js"></script>   
+        
         <!-- Facebook Pixel Code -->
 
         <script>
@@ -71,10 +63,19 @@
         <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=261553692083368&ev=PageView&noscript=1"/></noscript>
         
         <!-- End Facebook Pixel Code -->
+        
+    </head>
+    <body>
+        <!-- Typical website layout, the contents are dynamiclly updated by modules-->
+        <div id=header></div>
+        <div id=content></div>
+        <div id=footer></div>
+        <div id=app style='display:none'></div>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
     </body>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.14,0.14]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.15,0.15]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         $vm.debug=1;
         //------------------------------------
         //setup modules location
