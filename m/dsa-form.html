@@ -1,7 +1,7 @@
 <div id=D__ID>
 	<div class="container-fluid full-height">
 		<div class="row row-height">
-			<div class="col-lg-6 content-left">
+			<div id=top_part__ID class="col-lg-6 content-left">
 				<div class="content-left-wrapper" style="background-color:#4D8DA5;">
 					<a id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
 					<div>
@@ -721,7 +721,15 @@
                 $('#page' + I + '__ID').show();
                 $('#page' + I + "__ID * ").removeAttr('disabled');
                 current_I = I;
-                $(window).scrollTop(0);
+                //$(window).scrollTop(0);
+                if ($(window).width() < 960 && I>1) {
+                    $('#top_part__ID').hide()
+
+                }
+                else {
+                    $('#top_part__ID').show()
+                }
+
             }
             //-------------------------------------
             $("input[name='sex']").on('change', function () {
