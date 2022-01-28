@@ -1,7 +1,7 @@
 <div id=D__ID>
     <div class="container-fluid full-height">
         <div class="row row-height">
-            <div class="col-lg-6 content-left">
+            <div id=top_part__ID class="col-lg-6 content-left">
                 <div class="content-left-wrapper">
                     <a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
 					<div>
@@ -41,8 +41,16 @@
     </div>
     <script>
         function F__ID() {
-            //-------------------------------------
+            $('#D__ID').on('load', function () {
+                if ($(window).width() < 960) {
+                    $('#top_part__ID').hide();
+                }
+                else {
+                    $('#top_part__ID').show();
+                }
+            })
         }
+
     </script>
     <style>
     </style>
