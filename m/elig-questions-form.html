@@ -1281,9 +1281,9 @@
             })
             //---------------------------
             m.after_insert=function(data,res){
-                //console.log("AAA: "+JSON.stringify(res.result.ops[0].UID));
+                //console.log("AAA: "+JSON.stringify(res.nr.UID));
                 if(data.Consent=='Yes'){
-                    var uid=res.result.ops[0].UID;
+                    var uid=res.nr.UID;
                     if (m.prefix == undefined) { $vm.load_module('dsa-survey-form', '', {entry_id:uid}); }
                     else $vm.load_module(m.prefix + 'dsa-survey-form', '', {entry_id:uid});
                 }
