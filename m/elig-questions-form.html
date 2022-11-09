@@ -860,6 +860,22 @@
                                     </label>
                                 </div>
                             </div>
+                            <div id=captcha__ID style="display:none">
+                                <h3 class="main_question">To make sure you are not a robot.</h3>
+                                <!-- /Gunnar, a bit of code is required her to only show the success div  below if certain radiobuttons/checkboxes in the eligibility quesionnaire are not checked 
+                                    - use the div <div id="unsuccess"> and then copy the contents of the div -->
+                                <div style='padding-left:30px'>
+                                    <img id="captcha_img__ID" />
+                                </div>
+                                <p>Please type in the number and letters in the image in the box below.</p>
+                                <input type=text class="form-control" name=_captcha_code />
+                                <div style="display:none">
+                                    <input type=text name=_captcha_hash />
+                                    <input type=text name=_captcha_time />
+                                </div>
+                                <p id="captcha_error__ID" style="display:none;color:red">Some letters or numbers are not correct. Please try again</p>
+                            </div>
+
                             <!-- S__ID -->
                         </div>
                         <!-- Middle Wizard-->
@@ -908,12 +924,19 @@
             //---------------------------------------
             var N = 21;
             var current_I = 1;
+            var notelig=0;
             //---------------------------------------
-            m.before_submit = function (data, index) {
-                return true;
-            }
+            captcha_func=function(){
+                $vm.request({api:m.api,cmd:'captcha'},function(res){
+                    $('#F__ID input[name=_captcha_hash]').val(res.result.hash);
+                    $('#F__ID input[name=_captcha_time]').val(res.result.time);
+                    $('#captcha_img__ID').prop("src",res.result.img);
+                })
+            };
             //---------------------------------------
             $('#D__ID').on('load', function () {
+                notelig=0;
+                captcha_func();
                 $('#header').css('opacity', '0.8');
                 $('#submit1__ID').show();
                 $('#q4-1__ID').hide();
@@ -1034,34 +1057,47 @@
                 d = parseInt(d);
                 //console.log(d)
                 if (d < 0) {
-                    if(current_I===17) current_I=12;
-                    show_section(current_I - 1);
+                    if(current_I===17) current_I=12;{
+                        show_section(current_I - 1);
+                    }
                 }
                 else {
+                    if(notelig>0){
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                    }
                     //do nothing, m.submit will handle  
                 }
             })
             //---------------------------------------
             var show_section = function (I) {
-                for (var i = 1; i <= N; i++) {
-                    $('#S' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
-                    $('#S' + i + "__ID * ").attr('disabled', 'disabled');
-                }
-                if (I < 1) { I = 1; $('#S' + I + '__ID').show();}
-                if (I >= N) I = N;
-                $('#S' + I + '__ID').show();
-                $('#S' + I + "__ID * ").removeAttr('disabled');
-                current_I = I;
-                if(current_I==1) $('#previous__ID').hide();
-                else  $('#previous__ID').show();
-                console.log("show: "+I)
-                //$(window).scrollTop(0);
-                if ($(window).width() < 960 && I>1) {
-                    $('#top_part__ID').hide()
+                console.log("notelig: "+notelig)
+                if(notelig==0){
+                    for (var i = 1; i <= N; i++) {
+                        $('#S' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
+                        $('#S' + i + "__ID * ").attr('disabled', 'disabled');
+                    }
+                    if (I < 1) { I = 1; $('#S' + I + '__ID').show();}
+                    if (I >= N) I = N;
+                    $('#S' + I + '__ID').show();
+                    $('#S' + I + "__ID * ").removeAttr('disabled');
+                    current_I = I;
+                    if(current_I==1) $('#previous__ID').hide();
+                    else  $('#previous__ID').show();
+                    console.log("show: "+I)
+                    //$(window).scrollTop(0);
+                    if ($(window).width() < 960 && I>1) {
+                        $('#top_part__ID').hide()
 
+                    }
+                    else {
+                        $('#top_part__ID').show()
+                    }
                 }
-                else {
-                    $('#top_part__ID').show()
+                else{
+                    $("#captcha__ID").show(); 
+                    $('#previous__ID').hide();
+                    $('#next__ID').text("Submit");
                 }
             }
             //-------------------------------------
@@ -1207,7 +1243,7 @@
                 event.preventDefault();
                 if (current_I == N-1) {
                     calc_scores();
-                    console.log("All scores: "+ JSON.stringify(scores))
+                    //console.log("All scores: "+ JSON.stringify(scores))
                     if (parseInt($("input[name='age']").val()) < 60 ||
                         $("input[name='englishfluency']:checked").val() == 'N' ||
                         $("input[name='smartphone']:checked").val() == 'N' ||
@@ -1215,12 +1251,12 @@
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
                         $("input[name='illness']:checked").val() == 'Y' ||
                         scores.ISI < 10 ||
-                        scores.PSQI < 6) 
-                        {
-                        $('#F__ID *').removeAttr('disabled');
-                        old_submit(event);
-                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                        scores.PSQI < 6){
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
+                        $('#previous__ID').hide();
+                        $('#next__ID').text("Submit");
                     }
                     else {
                         show_section(current_I + 1);
@@ -1234,10 +1270,13 @@
                 }
                 else if (current_I == N) {
                     if (consented) {
-                        $('#F__ID *').removeAttr('disabled');
-                        $('#submit1__ID').hide();
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
                         $('#previous__ID').hide();
-                        old_submit(event);
+                        $('#submit1__ID').hide();
+                        $('#next__ID').show();
+                        $('#next__ID').text("Submit");
                     }
                     else {
                         $vm.alert("You must tick the consent box to be able to continue.")
@@ -1251,10 +1290,11 @@
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
                         $("input[name='illness']:checked").val() == 'Y')
                     {
-                        $('#F__ID *').removeAttr('disabled');
-                        old_submit(event);
-                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
+                        $('#previous__ID').hide();
+                        $('#next__ID').text("Submit");
                     }
                     show_section(current_I + 1);
                 }
@@ -1262,10 +1302,11 @@
                     calc_scores()
                     if (scores.PSQI < 6)
                     {
-                        $('#F__ID *').removeAttr('disabled');
-                        old_submit(event);
-                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
+                        $('#previous__ID').hide();
+                        $('#next__ID').text("Submit");
                     }
                     current_I=16;
                     show_section(current_I + 1);
@@ -1281,12 +1322,27 @@
             })
             //---------------------------
             m.after_insert=function(data,res){
-                //console.log("AAA: "+JSON.stringify(res.nr.UID));
-                if(data.Consent=='Yes'){
+                console.log(res)
+                if(data.Consent=='Yes' && notelig>0 && res.status!="captcha-error"){
                     var uid=res.nr.UID;
                     if (m.prefix == undefined) { $vm.load_module('dsa-survey-form', '', {entry_id:uid}); }
                     else $vm.load_module(m.prefix + 'dsa-survey-form', '', {entry_id:uid});
                 }
+                else if(notelig>0 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
+                    else $vm.load_module(m.prefix + 'not_elig', '', {});
+                }
+                else{
+                    captcha_func();
+                    $("#captcha_error__ID").show()
+                    $('#D__ID input[name=_captcha_code]').val('');
+                }
+                //console.log("AAA: "+JSON.stringify(res.nr.UID));
+                /*if(data.Consent=='Yes'){
+                    var uid=res.nr.UID;
+                    if (m.prefix == undefined) { $vm.load_module('dsa-survey-form', '', {entry_id:uid}); }
+                    else $vm.load_module(m.prefix + 'dsa-survey-form', '', {entry_id:uid});
+                }*/
             }
             //--------------------------
             $('input[name=disorders]').change(function() {
